@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const moment = require('moment');
 const path = require('path');
 
 const bmiHistory = [];
@@ -111,7 +112,7 @@ router.route('/bmicalculator').get((req, res) => {
 
     const bmiResult = calculateBMI(height, weight, age, gender, unit);
     
-    const timestamp = new Date().toLocaleString();
+    const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
     bmiHistory.push({ timestamp, result: bmiResult} );
 
     res.send(`
@@ -176,7 +177,7 @@ router.get('/history', (req, res) => {
                 <ul class="list-group">`;
 
     bmiHistory.forEach(entry => {
-        html += `<li class="list-group-item">${entry.timestamp} - ${entry.result}</li>`;
+        html += `<li class="list-group-item">${moment(entry.timestamp).format('YYYY-MM-DD HH:mm:ss')} - ${entry.result}</li>`;
     });
 
     html += `
