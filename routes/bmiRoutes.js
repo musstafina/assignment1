@@ -124,16 +124,26 @@ router.route('/bmicalculator').get((req, res) => {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
       <title>BMI Calculator Result</title>
     </head>
-    <body class="bg-light">
-      <div class="container mt-5">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">BMI Result</h2>
-            <p class="card-text"><strong>${bmiResult}</strong></p>
-          </div>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/bmicalculator">BMI Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/history">History</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">BMI Result</h2>
+                    <p class="card-text"><strong>${bmiResult}</strong></p>
+                </div>
+            </div>
         </div>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
   `);
