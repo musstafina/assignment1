@@ -20,42 +20,45 @@
     </nav>
 
     <div class="container mt-5">
-        <h1 class="mb-4 text-center">BMI Calculator</h1>
-        <form action="/bmicalculator" method="post" id="bmiForm">
-            <div class="form-group">
-                <label for="height">Height:</label>
-                <input type="number" name="height" id="height" class="'form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="weight">Weight:</label>
-                <input type="number" name="weight" id="weight" class="'form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" name="age" id="age" class="'form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select name="gender" id="gender" class="'form-control" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="unit">Units:</label>
-                <select name="unit" id="unit" class="'form-control" required>
-                    <option value="metric">Metric</option>
-                    <option value="imperial">Imperial</option>
-                </select>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
 
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Calculate BMI</button>
-        </form>
+                <h1 class="mb-4 text-center">BMI Calculator</h1>
+                <form action="/bmicalculator" method="post" id="bmiForm">
+                    <div class="form-group">
+                        <label for="unit">Units:</label>
+                        <select name="unit" id="unit" class="form-control" required>
+                            <option value="metric">Metric</option>
+                            <option value="imperial">Imperial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="height" id="heightLabel">Height:</label>
+                        <input type="number" name="height" id="height" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight" id="weightLabel">Weight:</label>
+                        <input type="number" name="weight" id="weight" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender" class="form-control" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Calculate BMI</button>
+                </form>
 
-        <div id="result" class="mt-4">
-            <p id="bmiResult" class="text-center"></p>
+                <div id="result" class="mt-4">
+                    <p id="bmiResult" class="text-center"></p>
+                </div>
+            </div>
         </div>
-
     </div>
 
     <footer class="mt-5">
@@ -64,7 +67,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="/public/scripts.js"></script>
 </body>
 </html>
